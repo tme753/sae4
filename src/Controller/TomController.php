@@ -7,11 +7,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 final class TomController extends AbstractController{
-    #[Route('/tom', name: 'app_tom')]
-    public function index(): Response
+    #[Route('/accueil', name: 'app_accueil')]
+    public function acceuil(): Response
     {
-        return $this->render('tom/index.html.twig', [
-            'controller_name' => 'TomController',
+        return $this->render('tom/accueil.html.twig', [
+            'name' => 'Tom',
+            'first_name' => 'Morand',
+            'groupe_tp' => 'Groupe B1',
         ]);
     }
 }

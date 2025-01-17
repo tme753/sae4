@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TomController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="container">
+    <div class="intro">
+        <h1>Bienvenue sur mon e-Portfolio</h1>
+        <p><strong>Nom :</strong> {{ first_name }} <br>
+        <strong>Prénom :</strong> {{ name }} <br>
+        <strong>Groupe TP :</strong> {{ groupe_tp }}</p>
+        <p>Je suis passionné par les nouvelles technologies, la création de code et le développement de sites internet. J'ai également un fort intérêt pour la cybersécurité, cherchant constamment à en apprendre davantage sur la protection des données et des systèmes informatiques..</p>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Pour en savoir plus</h2>
+        <p>Découvrez mes passions, loisirs, et projets.</p>
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+    </div>
+</div>
+{% endblock %}
