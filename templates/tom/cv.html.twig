@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TomController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>{{ name }}  {{ first_name }}</h1>
+    <h2>Ingénieur cybersécurité</h2>
+
+    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
+
+    <h2>Formations </h2>
+    <h3>BUT en Réseaux et Télécommunications</h3>
+    <p><strong>Université Jean Monnet</strong> de Roanne <em>-Septembre 2024</em></p>
+    <ul>
+        <li>Spécialisation souhaité : Cybersécurité </li>
+        <li>Projet réalisé : </li>
+        <ol> 
+        {# permet de créer une liste ordonée 1,23... #}
+            <li>Se sensibiliser à l’hygiène informatique et à la cybersécurité</li>
+            <li>S’initier aux réseaux informatiques</li>
+            <li>Découvrir un dispositif de transmission</li>
+            <li>Se présenter sur Internet via un e-portfolio</li>
+            <li>Traiter des données</li>
+        </ol>
+    </ul>
+    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
+
+    <h2>Expériences Professionnelles</h2>
+    <h3>Technicien Réseaux</h3>
+    <p><strong>Orange</strong> <em>Juillet 2024</em></p>
+    <ul>
+        <li>Gestion et maintenance des infrastructures réseaux.</li>
+        <li>Installation et configuration de réseaux locaux.</li>
+        <li>Déploiement de solutions de sécurité réseau.</li>
+    </ul>
+
+    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
+
+    <h2>Compétences</h2>
+    <ul>
+        <li><strong>Administration Réseaux :</strong> Cisco, configuration de Switch et de LAN.</li>
+        <li><strong>Sécurité Réseaux :</strong> Pare-feu, analyse, gestion des accès.</li>
+        <li><strong>Protocoles Réseaux :</strong> TCP/IP, DNS, DHCP, HTTP/HTTPS, FTP, TFTP.</li>
+        <li><strong>Outils et Langages :</strong> Wireshark, Bash, Python, HTML, CSS, JavaScript, php, MySql.</li>
+        <li><strong>Systèmes d'Exploitation :</strong> Linux, Windows.</li>
+        <li><strong>Gestion de Projets :</strong> Microsoft Project</li>
+    </ul>
+
+    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
+
+    <h2>Informations Personnelles</h2>
+    <ul>
+        <li><strong>Adresse : </strong>Roanne 42300</li>
+        <li><strong>Téléphone : </strong>06 05 04 03 02</li>
+        <li><strong>Email : </strong>tom.morand@etu.univ-st-etienne.fr</li>
+    </ul>
+
+    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
+
+    <p>bouton de téléchargement</p>
+</div>
+{% endblock %}
