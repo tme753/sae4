@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TomController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2 class="text-center">Téléchargez votre fichier</h2>
+    <form id="downloadForm" novalidate>
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Votre email" required>
+            <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+        </div>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input type="text" id="firstName" class="form-control" placeholder="Votre prénom" required>
+            <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Nom</label>
+            <input type="text" id="lastName" class="form-control" placeholder="Votre nom" required>
+            <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+        </div>
+        <button type="button" class="btn btn-primary me-2" id="downloadPdfBtn" disabled>Télécharger en PDF</button>
+        <button type="button" class="btn btn-secondary" id="downloadDocxBtn" disabled>Télécharger en DOCX</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('downloadForm');
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    const downloadDocxBtn = document.getElementById('downloadDocxBtn');
+
+    form.addEventListener('input', () => {
+        const isValid = form.checkValidity();
+        downloadPdfBtn.disabled = !isValid;
+        downloadDocxBtn.disabled = !isValid;
+    });
+
+    downloadPdfBtn.addEventListener('click', () => {
+        if (form.checkValidity()) {
+            const fileUrl = '/doc/CV.pdf'; // le fichier est dans public
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'CV.pdf';
+            link.click();
+        } else {
+            form.classList.add('was-validated');
+        }
+    });
+
+    downloadDocxBtn.addEventListener('click', () => {
+        if (form.checkValidity()) {
+            const fileUrl = '/doc/CV.docx'; // le fichier est dans public
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'CV.docx';
+            link.click();
+        } else {
+            form.classList.add('was-validated');
+        }
+    });
+</script>
+
+
+{% endblock %}

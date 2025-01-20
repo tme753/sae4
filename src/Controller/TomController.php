@@ -52,4 +52,13 @@ final class TomController extends AbstractController{
             'groupe_tp' => 'Groupe B1',
         ]);
     }
+    #[Route('/download', name: 'app_download')]
+    public function download(): Response
+    {
+        return $this->render('tom/download.html.twig', [
+            'name' => 'Tom',
+            'first_name' => 'Morand',
+            'groupe_tp' => 'Groupe B1',
+        ]);
+    }
 }

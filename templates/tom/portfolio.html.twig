@@ -4,33 +4,69 @@
 
 {% block body %}
 
-<div class="container">
-    <h1>Administrer : </h1>
-    <h2>Sensibilisation à l’hygiène informatique et à la cybersécurité</h2>
-    <p>La SAE 1 met l'accent sur l'importance de l'hygiène informatique et de la cybersécurité. Lors de cette activité, j'ai découvert diverses vulnérabilités. J'ai exploré l'évolution des systèmes informatiques depuis les années 1980, en observant la transition des échanges de données physiques à l'interconnexion globale via Internet. J'ai étudié les risques des cyberattaques, tels que les atteintes à l'image, à la disponibilité, à l'intégrité et à la confidentialité des données. Les cyberattaques, comme les DDoS et les malwares, ont également été abordées, avec un accent sur les méthodes de protection, notamment les antivirus, les pare-feu et les pratiques de sécurité renforcées. Des exercices pratiques sur la plateforme ROOT ME ont permis de mettre en œuvre ces connaissances.</p>
+<div class="container mt-4">
+    <div class="d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Navigation Tabs">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1" data-target="#administrateur">Administrer</label>
 
-    <h2>Configurer les fonctions de base du réseau local</h2>
-    <p>L’initiation aux réseaux informatiques m'a permis de configurer des adresses IP et de justifier mes choix. J'ai appris que l'adresse IP est une adresse logique, distincte de l'adresse physique MAC. La configuration des classes d'adresses IP, les commandes réseau comme ipconfig et ping, ainsi que la gestion des VLAN ont été des points clés de ma formation. J'ai su configurer les VLAN en mode access et trunk, relier les switches et configurer Telnet et SSH, assurant ainsi une communication sécurisée et efficace au sein du réseau.</p>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2" data-target="#connecter">Connecter</label>
 
-    <h2>Installer et configurer un poste client</h2>
-    <p>J'ai aussi installé des machines virtuelles et je sais également configurer un poste client selon les besoins.</p>
-    
-    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
-    
-    <h1>Connecter : </h1>
-    <h2>Déployer des supports de transmission</h2>
-    <p>J'ai appris à maîtriser la configuration de câbles droits pour les connexions réseau standard. Je sais également mettre en place deux liens TRUNK entre des commutateurs, ce qui permet de transmettre plusieurs VLANs sur une seule connexion. De plus, je suis capable d'agréger ces deux liens pour augmenter le débit et assurer une meilleure performance du réseau, en utilisant des techniques comme l'agrégation de liens (Link Aggregation) pour optimiser la bande passante et la redondance.</p>
-    
-    <h2>Supports de transmission pour les réseaux</h2>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3" data-target="#programmer">Programmer</label>
+        </div>
+    </div>
 
-<p>En ce qui concerne les procédures sur les postes de travail, je sais fixer une adresse IP manuellement sur un PC, en ajustant les paramètres réseau pour assurer une configuration correcte et stable. Une fois l'adresse IP configurée, je suis capable de tester la connectivité entre différents appareils, en utilisant des commandes comme ping pour vérifier que la communication réseau est établie sans erreur. Par ailleurs, j'ai acquis les compétences nécessaires pour effectuer des soudures sur des fibres optiques en minimisant les pertes de signal. Je sais aussi relier différent équipement et trouver les bon ports pour garentir la meilleure connexion possible.</p>
-    <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
-    
-    <h1>Programmer : </h1>
-    <h2>En programmation</h2> 
-    <p>j'ai acquis des compétences solides en langage C et Python, notamment en utilisant des structures conditionnelles et des boucles pour développer des programmes fonctionnels. J'ai aussi appris à manipuler des tableaux et des fichiers. Mon parcours m'a permis de comprendre et d'exécuter des programmes, tout en étant capable de corriger des erreurs et de les ajuster selon les exigences spécifiques d'un cahier des charges.</p>
-    <h2>Dans le domaine du développement web</h2> 
-    <p>j'ai créé des pages HTML, intégrant des éléments comme des balises, des images et des liens hypertextes. Mon code a été validé par les standards W3C. De plus, j'ai appris à utiliser le CSS pour styliser mes pages et à rendre mes sites web responsives. Je sais aussi utiliser du JavaScript pour rendre mon site plus dynamique. J'ai également exploré Symfony, lancé un serveur, et créé des pages d'accueil personnalisées. En intégrant des outils comme Bootstrap, j'ai amélioré la présentation et la fonctionnalité des sites web que j'ai développés. Je sais aussi utiliser MySQL pour les bases de données et mettre en place du PHP pour lier ces bases de données au site web.</p>
-    <p>Toutes ces compétences me permettent de travailler de manière autonome et sécurisée avec des systèmes informatiques, des réseaux et des applications, tout en respectant les meilleures pratiques en matière de sécurité et de développement.</p>
+    <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="administrateur" role="tabpanel">
+            <h2>Sensibilisation à l’hygiène informatique et à la cybersécurité</h2>
+            <p>La SAE 1 met l'accent sur l'importance de l'hygiène informatique et de la cybersécurité. Lors de cette activité, j'ai découvert diverses vulnérabilités. J'ai exploré l'évolution des systèmes informatiques depuis les années 1980, en observant la transition des échanges de données physiques à l'interconnexion globale via Internet. J'ai étudié les risques des cyberattaques, tels que les atteintes à l'image, à la disponibilité, à l'intégrité et à la confidentialité des données. Les cyberattaques, comme les DDoS et les malwares, ont également été abordées, avec un accent sur les méthodes de protection, notamment les antivirus, les pare-feu et les pratiques de sécurité renforcées. Des exercices pratiques sur la plateforme ROOT ME ont permis de mettre en œuvre ces connaissances.</p>
+            <hr class="my-4" style="border-top: 3px solid #35B3E0;">
+            <h2>Configurer les fonctions de base du réseau local</h2>
+            <p>L’initiation aux réseaux informatiques m'a permis de configurer des adresses IP et de justifier mes choix. J'ai appris que l'adresse IP est une adresse logique, distincte de l'adresse physique MAC. La configuration des classes d'adresses IP, les commandes réseau comme ipconfig et ping, ainsi que la gestion des VLAN ont été des points clés de ma formation. J'ai su configurer les VLAN en mode access et trunk, relier les switches et configurer Telnet et SSH, assurant ainsi une communication sécurisée et efficace au sein du réseau.</p>
+            <hr class="my-4" style="border-top: 3px solid #35B3E0;">
+            <h2>Installer et configurer un poste client</h2>
+            <p>J'ai aussi installé des machines virtuelles et je sais également configurer un poste client selon les besoins.</p>
+        </div>
+        <div class="tab-pane fade" id="connecter" role="tabpanel">
+           <h2>Déployer des supports de transmission</h2>
+            <p>J'ai appris à maîtriser la configuration de câbles droits pour les connexions réseau standard. Je sais également mettre en place deux liens TRUNK entre des commutateurs, ce qui permet de transmettre plusieurs VLANs sur une seule connexion. De plus, je suis capable d'agréger ces deux liens pour augmenter le débit et assurer une meilleure performance du réseau, en utilisant des techniques comme l'agrégation de liens (Link Aggregation) pour optimiser la bande passante et la redondance.</p>
+            <hr class="my-4" style="border-top: 3px solid #35B3E0;">
+            <h2>Supports de transmission pour les réseaux</h2>
+            <p>En ce qui concerne les procédures sur les postes de travail, je sais fixer une adresse IP manuellement sur un PC, en ajustant les paramètres réseau pour assurer une configuration correcte et stable. Une fois l'adresse IP configurée, je suis capable de tester la connectivité entre différents appareils, en utilisant des commandes comme ping pour vérifier que la communication réseau est établie sans erreur. Par ailleurs, j'ai acquis les compétences nécessaires pour effectuer des soudures sur des fibres optiques en minimisant les pertes de signal. Je sais aussi relier différents équipements et trouver les bons ports pour garantir la meilleure connexion possible.</p>
+        </div>
+        <div class="tab-pane fade" id="programmer" role="tabpanel">
+            <h2>En programmation</h2> 
+            <p>J'ai acquis des compétences solides en langage C et Python, notamment en utilisant des structures conditionnelles et des boucles pour développer des programmes fonctionnels. J'ai aussi appris à manipuler des tableaux et des fichiers. Mon parcours m'a permis de comprendre et d'exécuter des programmes, tout en étant capable de corriger des erreurs et de les ajuster selon les exigences spécifiques d'un cahier des charges.</p>
+            <hr class="my-4" style="border-top: 3px solid #35B3E0;">
+            <h2>Dans le domaine du développement web</h2> 
+            <p>J'ai créé des pages HTML, intégrant des éléments comme des balises, des images et des liens hypertextes. Mon code a été validé par les standards W3C. De plus, j'ai appris à utiliser le CSS pour styliser mes pages et à rendre mes sites web responsives. Je sais aussi utiliser du JavaScript pour rendre mon site plus dynamique. J'ai également exploré Symfony, lancé un serveur, et créé des pages d'accueil personnalisées. En intégrant des outils comme Bootstrap, j'ai amélioré la présentation et la fonctionnalité des sites web que j'ai développés. Je sais aussi utiliser MySQL pour les bases de données et mettre en place du PHP pour lier ces bases de données au site web.</p>
+            <p>Toutes ces compétences me permettent de travailler de manière autonome et sécurisée avec des systèmes informatiques, des réseaux et des applications, tout en respectant les meilleures pratiques en matière de sécurité et de développement.</p>
+        </div>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.btn-check');
+        const tabContents = document.querySelectorAll('.tab-pane');
+
+        buttons.forEach(button => {
+            button.addEventListener('change', function () {
+                const targetId = document.querySelector(`label[for="${this.id}"]`).getAttribute('data-target');
+
+                // Masquer toutes les sections de contenu
+                tabContents.forEach(content => {
+                    content.classList.remove('active', 'show');
+                });
+
+                // Afficher le contenu correspondant au bouton cliqué
+                const targetContent = document.querySelector(targetId);
+                targetContent.classList.add('active', 'show');
+            });
+        });
+    });
+</script>
+
 {% endblock %}

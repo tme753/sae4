@@ -59,9 +59,19 @@
                 margin: 0 auto;
                 padding: 0 15px; /* Ajoute un peu de padding pour les petits écrans */
             }
+
+            body.light-theme {
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            body.dark-theme {
+                background-color: #000000;
+                color: #ffffff;
+            }
         </style>
     </head>
-    <body>
+    <body class="dark-theme">
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">My e-Portfolio</a>
@@ -81,17 +91,20 @@
                          <li class="nav-item">
                             <a class="nav-link" href="/Me_contacter">Me contacter</a>
                         </li>
-                        </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="/portfolio">Portfolio</a>
                         </li>
                     </ul>
+                    <form class="d-flex" >
+                    <button type="button" class="btn btn-outline-light" id="lightModeBtn" style="margin-right: 10px;">Light</button>
+                    <button type="button" class="btn btn-outline-dark" id="darkModeBtn" style="margin-right: 10px;">Dark</button>
+                    </form>
                 </div>
             </div>
         </nav>
-        
+
         <div class="Container">
-                {% block body %}{% endblock %}
+            {% block body %}{% endblock %}
         </div>
         
         <footer>
@@ -112,5 +125,17 @@
                 <hr style="border-top: 3px solid #35B3E0; margin: 20px 0;">
             </div>
         </footer>
+
+        <script>
+            document.getElementById('lightModeBtn').addEventListener('click', function() {
+                document.body.classList.remove('light-theme');
+                document.body.classList.add('dark-theme');
+            });
+
+            document.getElementById('darkModeBtn').addEventListener('click', function() {
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('light-theme');
+            });
+        </script>
     </body>
 </html>
