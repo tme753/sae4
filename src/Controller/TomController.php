@@ -61,5 +61,9 @@ final class TomController extends AbstractController{
             'groupe_tp' => 'Groupe B1',
         ]);
     }
-    
+    #[Route('/competence', name: 'app_competence')]
+    public function competence(): Response
+    {
+        return $this->render('tom/competence.html.twig');
+    }
 }
